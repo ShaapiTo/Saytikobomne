@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по БЖД - Персональный сайт Луконина Егора</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Луконин Егор Вадимович</h1>
+        <p>Студент группы ПИ/б-23-1-о</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="interests.html">Мои интересы</a></li>
+            <li><a href="study.html">Учеба</a></li>
+            <li><a href="photo.html">Фотоальбом</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+            <li><a href="test.html">Тест по БЖД</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="test">
+            <h2>Тест по дисциплине "Безопасность жизнедеятельности"</h2>
+
+            <form id="testForm" class="test-form">
+                <!-- Данные пользователя -->
+                <div class="user-data">
+                    <h3>Данные студента</h3>
+                    
+                    <div class="form-group">
+                        <label for="studentName">Фамилия Имя Отчество *</label>
+                        <input type="text" id="studentName" name="studentName" required 
+                               placeholder="Иванов Иван Иванович">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentGroup">Группа *</label>
+                        <select id="studentGroup" name="studentGroup" required>
+                            <option value="">Выберите группу</option>
+                                <option value="ПИ/б-21-1-о">ИС/б-23-1-о</option>
+                                <option value="ПИ/б-21-2-о">ИС/б-23-2-о</option>
+                                <option value="ПИ/б-21-2-о">ПИ/б-23-1-о</option>
+                                <option value="ПИ/б-21-2-о">ПИ/б-23-2-о</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Вопросы теста -->
+                <div class="test-questions">
+                    <h3>Вопросы теста</h3>
+
+                    <!-- Вопрос 1: Textarea -->
+                    <div class="question">
+                        <h4>Вопрос 1: Что такое безопасность жизнедеятельности?</h4>
+                        <div class="form-group">
+                            <label for="q1">Ответ *</label>
+                            <textarea id="q1" name="q1" rows="4" required 
+                                      placeholder="Дайте развернутый ответ..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 2: Input (вещественное число) -->
+                    <div class="question">
+                        <h4>Вопрос 2: Укажите оптимальную температуру воздуха в учебной аудитории (в градусах Цельсия) *</h4>
+                        <div class="form-group">
+                            <label for="q2">Температура *</label>
+                            <input type="text" id="q2" name="q2" required 
+                                   placeholder="Например: 22.5"
+                                   pattern="[0-9]+([\.,][0-9]+)?"
+                                   title="Введите вещественное число (например: 20.5 или 21,3)">
+                            <small>Пример: 22.5 или 18,3</small>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 3: Checkbox 3 варианта -->
+                    <div class="question">
+                        <h4>Вопрос 3: Какие из перечисленных факторов относятся к опасным производственным факторам? (выберите один или несколько вариантов) *</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="q3" value="1">
+                                Повышенная запыленность воздуха
+                            </label>
+                            <label>
+                                <input type="checkbox" name="q3" value="2">
+                                Пониженная температура воздуха
+                            </label>
+                            <label>
+                                <input type="checkbox" name="q3" value="3">
+                                Комфортное освещение рабочего места
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">Отправить тест</button>
+                    <button type="reset" class="reset-btn">Очистить форму</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

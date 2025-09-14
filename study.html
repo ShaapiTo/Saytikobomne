@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учеба - Персональный сайт Луконина Егора</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Луконин Егор Вадимович</h1>
+        <p>Студент группы ПИ/б-23-1-о</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="interests.html">Мои интересы</a></li>
+            <li><a href="study.html">Учеба</a></li>
+            <li><a href="photo.html">Фотоальбом</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+            <li><a href="test.html">Тест по БЖД</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="study">
+            <h2>Моя учеба</h2>
+            
+            <div class="university-info">
+                <h3>Севастопольский государственный университет</h3>
+                <p><strong>Кафедра:</strong> Информационные системы</p>
+                <p><strong>Направление:</strong> Прикладная информатика</p>
+                <p><strong>Курс:</strong> 3 курс</p>
+            </div>
+
+            <div class="disciplines">
+                <h3>Расписание занятий по семестрам (часов в неделю)</h3>
+                
+                <table class="disciplines-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">№</th>
+                            <th rowspan="2">Дисциплина</th>
+                            <th colspan="3">1 курс</th>
+                            <th colspan="3">2 курс</th>
+                        </tr>
+                        <tr>
+                            <th>1 семестр</th>
+                            <th>2 семестр</th>
+                            <th>3 семестр</th>
+                            <th>4 семестр</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Лек|Лаб|Прак</th>
+                            <th>Лек|Лаб|Прак</th>
+                            <th>Лек|Лаб|Прак</th>
+                            <th>Лек|Лаб|Прак</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Экология</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>1|0|1</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Высшая математика</td>
+                            <td>3|0|3</td>
+                            <td>3|2|0</td>
+                            <td>2|0|2</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Русский язык и культура речи</td>
+                            <td>1|0|2</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Основы дискретной математики</td>
+                            <td>2|0|1</td>
+                            <td>3|0|2</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Основы программирования и алгоритмические языки</td>
+                            <td>3|2|0</td>
+                            <td>3|3|0</td>
+                            <td>-</td>
+                            <td>0|1|0</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Основы экологии</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>1|0|0</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Теория вероятностей и математическая статистика</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>3|1|0</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Физика</td>
+                            <td>2|2|0</td>
+                            <td>2|2|0</td>
+                            <td>2|1|0</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Основы электротехники и электроники</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>2|1|1</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Численные методы в информатике</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>2|2|0</td>
+                            <td>0|1|0</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Методы исследования операций</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>1|1|0</td>
+                            <td>2|1|0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-legend">
+                <h4>Условные обозначения:</h4>
+                <ul>
+                    <li><strong>Лек</strong> - Лекции</li>
+                    <li><strong>Лаб</strong> - Лабораторные работы</li>
+                    <li><strong>Прак</strong> - Практические работы</li>
+                    <li><strong>-</strong> - Дисциплина не изучается в данном семестре</li>
+                </ul>
+            </div>
+
+            <div class="test-link">
+                <h3>Тестирование</h3>
+                <p>Пройти тест по дисциплине "Безопасность жизнедеятельности":</p>
+                <a href="test.html" class="test-button">Перейти к тесту</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
