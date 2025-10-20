@@ -401,18 +401,19 @@ main {
 .photo-item {
     background: #fff;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible; /* Изменено с hidden на visible */
     box-shadow: 0 3px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.photo-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+.photo-image-container {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
-.photo-item img {
+.photo-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -420,7 +421,7 @@ main {
     transition: transform 0.3s ease;
 }
 
-.photo-item:hover img {
+.photo-item:hover .photo-img {
     transform: scale(1.05);
 }
 
@@ -432,6 +433,8 @@ main {
     font-weight: 500;
     color: #2c3e50;
     border-top: 1px solid #eee;
+    border-radius: 0 0 10px 10px;
+    flex-shrink: 0;
 }
 
 .back-to-main {

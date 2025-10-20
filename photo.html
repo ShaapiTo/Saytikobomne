@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фотоальбом - Персональный сайт Луконина Егора</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <script src="script.js?v=2"></script>
 </head>
 <body>
     <header>
@@ -30,7 +30,7 @@
             <h2>Baldur's Gate 3</h2>
             
             <div id="photos-container">
-                <!-- Фото будут загружены через JavaScript -->
+                <p>Загрузка фотоальбома...</p>
             </div>
 
             <div class="back-to-main">
@@ -42,8 +42,14 @@
     <script>
         // Загружаем фотоальбом при загрузке страницы
         document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM загружен, запускаем фотоальбом");
             const container = document.getElementById('photos-container');
-            container.innerHTML = displayPhotoAlbum();
+            if (container) {
+                container.innerHTML = displayPhotoAlbum();
+                console.log("Фотоальбом загружен");
+            } else {
+                console.error("Контейнер для фото не найден!");
+            }
         });
     </script>
 </body>

@@ -74,8 +74,10 @@ function createList(type, ...items) {
     return html;
 }
 
-// Функция для отображения фотоальбома из массивов
+// Функция для отображения фотоальбома из массивов (v2 - исправлено отображение)
 function displayPhotoAlbum() {
+    console.log("Функция displayPhotoAlbum вызвана"); // Для отладки
+    
     const fotos = [
         'photos/photo1.jpg', 'photos/photo2.jpg', 'photos/photo3.jpg',
         'photos/photo4.jpg', 'photos/photo5.jpg', 'photos/photo6.jpg',
@@ -95,11 +97,15 @@ function displayPhotoAlbum() {
     for (let i = 0; i < fotos.length; i++) {
         html += `
             <div class="photo-item">
-                <img src="${fotos[i]}" alt="${titles[i]}" title="${titles[i]}">
+                <div class="photo-image-container">
+                    <img src="${fotos[i]}" alt="${titles[i]}" title="${titles[i]}" class="photo-img">
+                </div>
                 <p class="photo-title">${titles[i]}</p>
             </div>
         `;
     }
     html += '</div>';
+    
+    console.log("HTML сгенерирован"); // Для отладки
     return html;
 }
