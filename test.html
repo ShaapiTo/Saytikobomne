@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тест по БЖД - Персональный сайт Луконина Егора</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="test-validation.js"></script>
 </head>
 <body>
     <header>
@@ -28,7 +30,7 @@
         <section class="test">
             <h2>Тест по дисциплине "Безопасность жизнедеятельности"</h2>
 
-            <form id="testForm" class="test-form">
+            <form id="testForm" class="test-form" onsubmit="return validateTestForm()">
                 <!-- Данные пользователя -->
                 <div class="user-data">
                     <h3>Данные студента</h3>
@@ -43,11 +45,10 @@
                         <label for="studentGroup">Группа *</label>
                         <select id="studentGroup" name="studentGroup" required>
                             <option value="">Выберите группу</option>
-                                <option value="ПИ/б-21-1-о">ИС/б-23-1-о</option>
-                                <option value="ПИ/б-21-2-о">ИС/б-23-2-о</option>
-                                <option value="ПИ/б-21-2-о">ПИ/б-23-1-о</option>
-                                <option value="ПИ/б-21-2-о">ПИ/б-23-2-о</option>
-                            </optgroup>
+                            <option value="ИС/б-23-1-о">ИС/б-23-1-о</option>
+                            <option value="ИС/б-23-2-о">ИС/б-23-2-о</option>
+                            <option value="ПИ/б-23-1-о">ПИ/б-23-1-о</option>
+                            <option value="ПИ/б-23-2-о">ПИ/б-23-2-о</option>
                         </select>
                     </div>
                 </div>
@@ -58,9 +59,9 @@
 
                     <!-- Вопрос 1: Textarea -->
                     <div class="question">
-                        <h4>Вопрос 1: Что такое безопасность жизнедеятельности?</h4>
+                        <h4>Вопрос 1: Что такое безопасность жизнедеятельности? *</h4>
                         <div class="form-group">
-                            <label for="q1">Ответ *</label>
+                            <label for="q1">Ответ (не менее 30 слов)</label>
                             <textarea id="q1" name="q1" rows="4" required 
                                       placeholder="Дайте развернутый ответ..."></textarea>
                         </div>
@@ -72,27 +73,25 @@
                         <div class="form-group">
                             <label for="q2">Температура *</label>
                             <input type="text" id="q2" name="q2" required 
-                                   placeholder="Например: 22.5"
-                                   pattern="[0-9]+([\.,][0-9]+)?"
-                                   title="Введите вещественное число (например: 20.5 или 21,3)">
+                                   placeholder="Например: 22.5">
                             <small>Пример: 22.5 или 18,3</small>
                         </div>
                     </div>
 
                     <!-- Вопрос 3: Checkbox 3 варианта -->
                     <div class="question">
-                        <h4>Вопрос 3: Какие из перечисленных факторов относятся к опасным производственным факторам? (выберите один или несколько вариантов) *</h4>
+                        <h4>Вопрос 3: Какие из перечисленных факторов относятся к опасным производственным факторам? (выберите не менее двух вариантов) *</h4>
                         <div class="checkbox-group">
                             <label>
-                                <input type="checkbox" name="q3" value="1">
+                                <input type="checkbox" name="q3" value="Повышенная запыленность воздуха">
                                 Повышенная запыленность воздуха
                             </label>
                             <label>
-                                <input type="checkbox" name="q3" value="2">
+                                <input type="checkbox" name="q3" value="Пониженная температура воздуха">
                                 Пониженная температура воздуха
                             </label>
                             <label>
-                                <input type="checkbox" name="q3" value="3">
+                                <input type="checkbox" name="q3" value="Комфортное освещение рабочего места">
                                 Комфортное освещение рабочего места
                             </label>
                         </div>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мои интересы - Персональный сайт Луконина Егора</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -43,50 +44,56 @@
 
             <div id="books" class="interest-section">
                 <h3>Любимые игры</h3>
-                <ol>
-                    <li>"Baldur’s Gate 3" - Larian Studios</li>
-                    <li>"The Binding of Isaac" - Эдмунд Макмиллен</li>
-                    <li>"Mobile Legends: Bang Bang" - Moonton </li>
-                    <li>"Don’t Starve" - Klei Entertainment</li>
-                    <li>"Subnautica" - Unknown Worlds Entertainment</li>
-                </ol>
+                <div id="games-list"></div>
             </div>
 
             <div id="music" class="interest-section">
                 <h3>Любимая музыка</h3>
-                <ul>
-                    <li>Рок - Imagine Dragons, Linkin Park</li>
-                    <li>Инди-поп - Polnalyubvi, Green Apelsin</li>
-                    <li>Fonk - Kordhell, Shadowraze</li>
-                    <li>Электроника - NICKY ØDESSA</li>
-                </ul>
+                <div id="music-list"></div>
             </div>
 
             <div id="movies" class="interest-section">
                 <h3>Любимые фильмы</h3>
-                <ul>
-                    <li>Научная фантастика:
-                        <ul>
-                            <li>Интерстеллар</li>
-                            <li>Матрица</li>
-                            <li>Начало</li>
-                        </ul>
-                    </li>
-                    <li>Фэнтези:
-                        <ul>
-                            <li>Властелин колец</li>
-                            <li>Гарри Поттер</li>
-                        </ul>
-                    </li>
-                    <li>Драмы:
-                        <ul>
-                            <li>Зеленая книга</li>
-                            <li>Форрест Гамп</li>
-                        </ul>
-                    </li>
-                </ul>
+                <div id="movies-list"></div>
             </div>
         </section>
     </main>
+
+    <script>
+        // Создаем списки с помощью JavaScript функции
+        document.addEventListener('DOMContentLoaded', function() {
+            // Любимые игры
+            document.getElementById('games-list').innerHTML = createList('o', 
+                '"Baldur’s Gate 3" - Larian Studios',
+                '"The Binding of Isaac" - Эдмунд Макмиллен',
+                '"Mobile Legends: Bang Bang" - Moonton',
+                '"Don’t Starve" - Klei Entertainment',
+                '"Subnautica" - Unknown Worlds Entertainment'
+            );
+            
+            // Любимая музыка
+            document.getElementById('music-list').innerHTML = createList('u',
+                'Рок - Imagine Dragons, Linkin Park',
+                'Инди-поп - Polnalyubvi, Green Apelsin',
+                'Fonk - Kordhell, Shadowraze',
+                'Электроника - NICKY ØDESSA'
+            );
+            
+            // Любимые фильмы
+            document.getElementById('movies-list').innerHTML = `
+                <ul>
+                    <li>Научная фантастика:
+                        ${createList('u', 'Интерстеллар', 'Матрица', 'Начало')}
+                    </li>
+                    <li>Фэнтези:
+                        ${createList('u', 'Властелин колец', 'Гарри Поттер')}
+                    </li>
+                    <li>Драмы:
+                        ${createList('u', 'Зеленая книга', 'Форрест Гамп')}
+                    </li>
+                </ul>
+            `;
+        });
+    </script>
 </body>
 </html>
